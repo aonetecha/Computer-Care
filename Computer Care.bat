@@ -1,12 +1,19 @@
 
     :: Version - 1.0.0
     ::Founder - Anindya Ghoshal
-
+    :: Copyright aoneTech.
 
 @echo off 
-rename ffmpeg-4.4-full_build ffmpeg
-move ffmpeg C:\
 cls
+ ::rename ffmpeg-4.4-full_build ffmpeg
+ ::move ffmpeg C:\
+
+cls
+title Command Prompt - By Computer
+ver
+echo.
+echo (C) Copyright aoneTech.
+echo.
 :Care
 color 70
 echo.
@@ -297,7 +304,8 @@ pause
 exit 
 
 :o
-mkdir ScreenRecord
+mkdir ffmpeg-4.4-full_build\bin\ScreenRecord
+cd ffmpeg-4.4-full_build\bin
 cls 
 echo.
 echo   [It will not Open run as administrator doing this]
@@ -306,6 +314,7 @@ echo  Press q to turn off screen record.
 echo.
 echo.
 set /p scr=" Enter Your output File name => "
+
 ffmpeg -f gdigrab -framerate 60 -i desktop "ScreenRecord\%scr%.mp4"
 echo.
 pause
