@@ -318,6 +318,7 @@ set /p scr=" Enter Your output File name => "
 ffmpeg -f gdigrab -framerate 60 -i desktop "ScreenRecord\%scr%.mp4"
 echo.
 pause
+START ScreenRecord 
 cls
 goto Care
 
