@@ -39,9 +39,9 @@ echo  Press [6] to Data Delete permanetly [Data cannot be RECOVERED]            
 echo.
 echo  Press [7] to Background process...                                            Press [16] to View USB Activity...                                           
 echo.
-echo  Press [8] to System Information...                                            Press [h] to Help... / Press [e] to Exit...                                             
+echo  Press [8] to System Information...                                            Press [17] to Create a virtual drive..                                                                                       
 echo.
-echo  Press [9] Protect File and Foleder...
+echo  Press [9] Protect File and Foleder...                                         Press [h] to Help... / Press [e] to Exit...  
 echo. 
 set /p var="What you want chosse => " 
 echo.
@@ -61,6 +61,7 @@ if %var% == 13 goto m
 if %var% == 14 goto n
 if %var% == 15 goto o
 if %var% == 16 goto p
+if %var% == 17 goto q
 if %var% == h goto mainhelp
 if %var% == e goto exit
 cls
@@ -329,6 +330,48 @@ echo.
 pause
 cls
 exit /b
+
+:q
+:vir
+cls
+echo.
+echo.
+echo       [ Create Folder to virtual Dirve ]
+echo.
+echo.
+echo Press [1] to Creat virtual drive..
+echo.
+echo Press [2] to Delete virtual drive..
+echo.
+echo Press [3] to Back..
+echo.
+set /p drive="What you want choose => "
+if %drive% == 1 goto create
+if %drive% == 2 goto delete
+if %drive% == 3 goto back
+
+:create
+echo.
+set /p dev="Enter the drive Letter => "
+echo.
+set /p dev1="Enter the folder full path => "
+subst %dev%: "%dev1%"
+echo.
+pause
+goto vir
+
+:delete
+echo.
+set /p dev2="Enter the drive Letter => "
+subst %dev2%: /d
+echo.
+pause
+goto vir
+
+:back
+cls
+goto Care
+
  
 :mainhelp
 cls
@@ -349,7 +392,7 @@ echo  [This application will must be run the Run as administrator]
 echo.
 echo    But when recovering data and viewing computer activity and Create Bootable pendrive and 
 echo.
-echo    View USB Activity,this application will NOT open run as administrator.
+echo    View USB Activity and Create vritual drive,Thear is no need to run as administrator for them.
 echo. 
 echo      Thank You For Download :)
 echo.
