@@ -35,7 +35,7 @@ echo  Press [6] to Data Delete permanetly [Data cannot be RECOVERED]            
 echo.
 echo  Press [7] to Background process...                                            Press [16] to View USB Activity...                                           
 echo.
-echo  Press [8] to System Information...                                            Press [17] to Create a virtual drive..                                                                                       
+echo  Press [8] to System Information...                                            Press [m] to More Options...                                                                                       
 echo.
 echo  Press [9] Protect File and Foleder...                                         Press [h] to Help... / Press [e] to Exit...  
 echo. 
@@ -57,7 +57,8 @@ if %var% == 13 goto m
 if %var% == 14 goto n
 if %var% == 15 goto o
 if %var% == 16 goto p
-if %var% == 17 goto q
+if %var% == m goto q
+if %var% == M goto q
 if %var% == h goto mainhelp
 if %var% == e goto exit
 cls
@@ -328,6 +329,24 @@ cls
 exit /b
 
 :q
+cls
+echo.
+echo  Prees [17] to Create virtual drive...
+echo.
+echo  Press [18] to Convert File Format...
+echo.
+echo  Press [b] to Back... 
+
+set /p more="What you want chosse => "
+echo.
+if %more% == 17 goto virtual
+if %more% == 18 format
+if %more% == b to Back
+if %more == B to Back
+
+
+:virtual
+cls
 :vir
 cls
 echo.
@@ -339,7 +358,7 @@ echo Press [1] to Creat virtual drive..
 echo.
 echo Press [2] to Delete virtual drive..
 echo.
-echo Press [3] to Back..
+echo Press [b] to Back...
 echo.
 set /p drive="What you want choose => "
 if %drive% == 1 goto create
