@@ -5,10 +5,6 @@
 
 @echo off 
 cls
- ::rename ffmpeg-4.4-full_build ffmpeg
- ::move ffmpeg C:\
-
-cls
 title Command Prompt - By Computer
 ver
 echo.
