@@ -330,20 +330,23 @@ exit /b
 
 :q
 cls
+:main
+
+cls
 echo.
 echo  Prees [17] to Create virtual drive...
 echo.
 echo  Press [18] to Convert File Format...
 echo.
-echo  Press [b] to Back... 
+echo  Press [99] to Back... 
+echo.
 
 set /p more="What you want chosse => "
 echo.
 if %more% == 17 goto virtual
-if %more% == 18 format
-if %more% == b to Back
-if %more == B to Back
-
+if %more% == 18 goto format
+if %more% == 99 goto Back
+echo.
 
 :virtual
 cls
@@ -358,7 +361,7 @@ echo Press [1] to Creat virtual drive..
 echo.
 echo Press [2] to Delete virtual drive..
 echo.
-echo Press [b] to Back...
+echo Press [3] to Back...
 echo.
 set /p drive="What you want choose => "
 if %drive% == 1 goto create
@@ -383,10 +386,8 @@ echo.
 pause
 goto vir
 
-:back
-cls
-goto Care
-
+:Back
+goto q
  
 :mainhelp
 cls
