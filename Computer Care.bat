@@ -1,5 +1,5 @@
 
-    :: Version - 1.0.0
+    :: Version - 2.0
     ::Founder - Anindya Ghoshal
     :: Copyright aoneTech.
 
@@ -338,16 +338,16 @@ echo  Prees [17] to Create virtual drive...
 echo.
 echo  Press [18] to Convert File Format...
 echo.
-echo  Press [99] to Back... 
+echo  Press [b] to Back... 
 echo.
 
 set /p more="What you want chosse => "
 echo.
 if %more% == 17 goto virtual
 if %more% == 18 goto format
-if %more% == 99 goto Back
+if %more% == b goto ack
 echo.
-
+goto q
 :virtual
 cls
 :vir
@@ -367,14 +367,14 @@ set /p drive="What you want choose => "
 if %drive% == 1 goto create
 if %drive% == 2 goto delete
 if %drive% == 3 goto back
-
+goto vir
 :create
 echo.
 set /p dev="Enter the drive Letter => "
 echo.
 set /p dev1="Enter the folder full path => "
 subst %dev%: "%dev1%"
-echo.
+echo.ss
 pause
 goto vir
 
@@ -388,6 +388,10 @@ goto vir
 
 :Back
 goto q
+
+:ack
+cls
+goto Care
  
 :mainhelp
 cls
