@@ -328,6 +328,8 @@ pause
 cls
 exit /b
 
+::More
+
 :q
 cls
 :main
@@ -336,7 +338,7 @@ cls
 echo.
 echo  Prees [17] to Create virtual drive...
 echo.
-echo  Press [18] to Convert File Format...
+echo  Press [18] to Clean RAM...
 echo.
 echo  Press [b] to Back... 
 echo.
@@ -344,7 +346,7 @@ echo.
 set /p more="What you want chosse => "
 echo.
 if %more% == 17 goto virtual
-if %more% == 18 goto format
+if %more% == 18 goto ram
 if %more% == b goto ack
 echo.
 goto q
@@ -389,6 +391,13 @@ goto vir
 :Back
 goto q
 
+:ram
+cd RAM_C
+START RAMMap.exe
+echo.
+pause
+exit 
+
 :ack
 cls
 goto Care
@@ -410,9 +419,9 @@ echo            #     #   #######   #########  #
 echo.
 echo  [This application will must be run the Run as administrator]
 echo.
-echo    But when recovering data and viewing computer activity and Create Bootable pendrive and 
+echo    But when recovering data,viewing computer activity,Create Bootable pendrive, 
 echo.
-echo    View USB Activity and Create vritual drive,Thear is no need to run as administrator for them.
+echo    View USB Activity, Create vritual drive and Clean RAM Thear is no need to run as administrator for them.
 echo. 
 echo      Thank You For Download :)
 echo.
