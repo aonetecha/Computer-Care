@@ -1,5 +1,5 @@
 
-    :: Version - 2.0
+    :: Version - 1.2
     ::Founder - Anindya Ghoshal
     :: Copyright aoneTech.
 
@@ -305,9 +305,7 @@ cd usb
 START USBDeview.exe 
 echo.
 pause
-cls
-goto Care
-::exit /b
+exit /b
 
 ::More
 
@@ -377,7 +375,6 @@ cd RAM_C
 START RAMMap.exe
 echo.
 pause
-goto q
 exit 
 
 :ack
