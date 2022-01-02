@@ -31,13 +31,13 @@ echo  Press [4] to disk Optimization...                                         
 echo.
 echo  Press [5] to Fix logical error [and] Repair disk bad sector...                Press [14] to Test Internet Speed...                             
 echo.
-echo  Press [6] to Data Delete permanetly [Data cannot be RECOVERED]                Press [15] to Screnn Recoder...                                                  
+echo  Press [6] to Data Delete permanetly [Data cannot be RECOVERED]                Press [15] to View USB Activity...                                           
+echo.      
+echo  Press [7] to Background process...                                            Press [m] to More Options...                                                                                    
 echo.
-echo  Press [7] to Background process...                                            Press [16] to View USB Activity...                                           
+echo  Press [8] to System Information...                                            Press [h] to Help... / Press [e] to Exit...                                                                                                                                  
 echo.
-echo  Press [8] to System Information...                                            Press [m] to More Options...                                                                                       
-echo.
-echo  Press [9] Protect File and Foleder...                                         Press [h] to Help... / Press [e] to Exit...  
+echo  Press [9] Protect File and Foleder...                                          
 echo. 
 set /p var="What you want chosse => " 
 echo.
@@ -55,8 +55,7 @@ if %var% == 11 goto k
 if %var% == 12 goto l
 if %var% == 13 goto m 
 if %var% == 14 goto n
-if %var% == 15 goto o
-if %var% == 16 goto p
+if %var% == 15 goto p
 if %var% == m goto q
 if %var% == M goto q
 if %var% == h goto mainhelp
@@ -299,26 +298,7 @@ cd Bootable pendrive
 START rufus.exe
 echo.
 pause 
-exit 
-
-:o
-mkdir ffmpeg-4.4-full_build\bin\ScreenRecord
-cd ffmpeg-4.4-full_build\bin
-cls 
-echo.
-echo   [It will not Open run as administrator doing this]
-echo.
-echo  Press q to turn off screen record.
-echo.
-echo.
-set /p scr=" Enter Your output File name => "
-
-ffmpeg -f gdigrab -framerate 60 -i desktop "ScreenRecord\%scr%.mp4"
-echo.
-pause
-START ScreenRecord 
-cls
-goto Care
+exit
 
 :p
 cd usb 
@@ -326,7 +306,8 @@ START USBDeview.exe
 echo.
 pause
 cls
-exit /b
+goto Care
+::exit /b
 
 ::More
 
@@ -336,17 +317,17 @@ cls
 
 cls
 echo.
-echo  Prees [17] to Create virtual drive...
+echo  Prees [16] to Create virtual drive...
 echo.
-echo  Press [18] to Clean RAM...
+echo  Press [17] to Clean RAM...
 echo.
 echo  Press [b] to Back... 
 echo.
 
 set /p more="What you want chosse => "
 echo.
-if %more% == 17 goto virtual
-if %more% == 18 goto ram
+if %more% == 16 goto virtual
+if %more% == 17 goto ram
 if %more% == b goto ack
 echo.
 goto q
