@@ -396,6 +396,7 @@ cd RAM_C
 START RAMMap.exe
 echo.
 pause
+goto q
 exit 
 
 :ack
