@@ -1,11 +1,9 @@
 # Computer-Care
 Donot Miss..
 
-![12](https://user-images.githubusercontent.com/85815644/132115189-b36d9f53-a5aa-48f9-b8c4-7eefffdb9b16.gif)
+![First](https://user-images.githubusercontent.com/85815644/147868003-0cafb89f-fedd-4822-877d-eef6b4541d32.jpg)
 
+![second](https://user-images.githubusercontent.com/85815644/147868012-3e6e268a-e352-4094-89ce-19e768b4deef.jpg)
 
-![2](https://user-images.githubusercontent.com/85815644/132115199-05547528-6d18-46fb-8ed3-12ee5d9e7557.PNG)
+![Thirde](https://user-images.githubusercontent.com/85815644/147868025-5b6dd463-cb40-410d-985a-381ed2a8b357.jpg)
 
-![3](https://user-images.githubusercontent.com/85815644/132115204-c4f5d46c-2958-4377-b792-cff000f04ec2.PNG)
-
-![4](https://user-images.githubusercontent.com/85815644/132115205-4077f901-cad5-43e2-96ca-1d0ac859a183.PNG)
