@@ -5,21 +5,20 @@
 
 @echo off 
 cls
-title Command Prompt - By Computer
+  title Command Prompt - By Computer
 ver
 echo.
-echo (C) Copyright aoneTech.
+echo  (C) Copyright aoneTech.
+echo.
+echo  Founder - Anindya Ghoshal
 echo.
 :Care
 color 70
-echo.
-echo.
 echo                                            ########################### 
 echo                                            #                         #     
-echo                                            #    [=Computer Care=]    #   
+echo                                            #   [=Computer Care=]     #   
 echo                                            #                         #
 echo                                            ###########################
-echo.
 echo.
 echo  Press [1] to Clean Junk file...                                               Press [10] to DtatRecover...                                              
 echo.                                                                                                     
