@@ -11,6 +11,7 @@ I will no say anything about this tool.You Just try it.
 ```bash
 Install [FFmpeg](https://www.ffmpeg.org/download.html/)
 Install [Imagemagick](https://imagemagick.org/script/download.php)
+```
 ## OS Support
 
 Windows XP,7,8,10,11
