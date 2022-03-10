@@ -15,12 +15,8 @@ Windows XP,7,8,10,11
 
 ## Screenshots
 
-![First](https://user-images.githubusercontent.com/85815644/147868003-0cafb89f-fedd-4822-877d-eef6b4541d32.jpg)
-
-![second](https://user-images.githubusercontent.com/85815644/147868012-3e6e268a-e352-4094-89ce-19e768b4deef.jpg)
-
-![Thirde](https://user-images.githubusercontent.com/85815644/147868025-5b6dd463-cb40-410d-985a-381ed2a8b357.jpg)
-
+![aoneTech (67)](https://user-images.githubusercontent.com/85815644/157691688-3602f7ad-e697-4461-936c-1237a8005297.png)
+![aoneTech (68)](https://user-images.githubusercontent.com/85815644/157691772-cfc36a3d-54ed-4870-8d84-d14ce289f631.png)
 
 ## Authors
 
