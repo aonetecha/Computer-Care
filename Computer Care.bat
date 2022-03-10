@@ -20,23 +20,23 @@ echo                                            #   [=Computer Care=]     #
 echo                                            #                         #
 echo                                            ###########################
 echo.
-echo  Press [1] to Clean Junk file...                                               Press [10] to DtatRecover...                                              
+echo  Press [1] to Clean Junk file                                                  Press [10] to DtatRecover                                              
 echo.                                                                                                     
-echo  Press [2] to disk Format...                                                   Press [11] to Computer Activity View...                                                                                    
+echo  Press [2] to disk Format                                                      Press [11] to Computer Activity View                                                                                   
 echo. 
-echo  Press [3] to File Search...                                                   Press [12] to Create Hostpot in your Computer...                                                                                                    
+echo  Press [3] to File Search                                                      Press [12] to Create Hostpot in your Computer                                                                                                   
 echo.
-echo  Press [4] to disk Optimization...                                             Press [13] to Create Bootable pendrive...                                                                                                     
+echo  Press [4] to disk Optimization                                                Press [13] to Create Bootable pendrive                                                                                                     
 echo.
-echo  Press [5] to Fix logical error [and] Repair disk bad sector...                Press [14] to Test Internet Speed...                             
+echo  Press [5] to Fix logical error [and] Repair disk bad sector                   Press [14] to Test Internet Speed                           
 echo.
-echo  Press [6] to Data Delete permanetly [Data cannot be RECOVERED]                Press [15] to View USB Activity...                                           
+echo  Press [6] to Data Delete permanetly [Data cannot be RECOVERED]                Press [15] to View USB Activity                                         
 echo.      
-echo  Press [7] to Background process...                                            Press [m] to More Options...                                                                                    
+echo  Press [7] to Background process                                               Press [m] to More Options                                                                                 
 echo.
-echo  Press [8] to System Information...                                            Press [h] to Help... / Press [e] to Exit...                                                                                                                                  
+echo  Press [8] to System Information                                               Press [h] to Help / Press [e] to Exit                                                                                                                                  
 echo.
-echo  Press [9] Protect File and Foleder...                                          
+echo  Press [9] Protect File and Foleder                                          
 echo. 
 set /p var="What you want chosse => " 
 echo.
@@ -314,17 +314,23 @@ cls
 
 cls
 echo.
-echo  Prees [16] to Create virtual drive...
+echo  Prees [16] to Create virtual drive
 echo.
-echo  Press [17] to Clean RAM...
+echo  Press [17] to Clean RAM
 echo.
-echo  Press [b] to Back... 
+echo  Press [18] to Comprase Imagee Size
+echo.
+echo  Press [19] to Image to pdf Convert
+echo.
+echo  Press [b] to Back
 echo.
 
 set /p more="What you want chosse => "
 echo.
 if %more% == 16 goto virtual
 if %more% == 17 goto ram
+if %more% == 18 goto size
+if %more% == 19 goto convert
 if %more% == b goto ack
 echo.
 goto q
@@ -354,7 +360,7 @@ set /p dev="Enter the drive Letter => "
 echo.
 set /p dev1="Enter the folder full path => "
 subst %dev%: "%dev1%"
-echo.ss
+echo.
 pause
 goto vir
 
@@ -375,6 +381,29 @@ START RAMMap.exe
 echo.
 pause
 exit 
+
+:size
+cls
+echo.
+echo   1.56 MB Image Comprase:
+echo.
+echo   "5%% = 151 KB | 10%% = 214 KB | 20%% = 332 KB | 30%% = 450 KB | 40%% = 565 KB | 50%% = 668 KB"
+echo.  
+echo   "60%% = 790 KB | 70%% = 0.98 MB | 80%% = 1.32 MB | 90%% = 1.87 MB | 100%% = 5.27 MB"        
+echo.
+set /p size="Enter image first file path: "
+echo.
+set /p size2="Enter Image Comprase Percentage (%%): "
+echo.
+set /p size3="Enter image name (image.png): "
+echo.
+set /p size4="Enter output iamge name: "
+magick convert -strip -interlace plane -gaussian-blur 0.05 -quality %size2% "%size%\%size3%" "%size%\%size4%" 
+echo.
+pause
+goto main
+
+
 
 :ack
 cls
