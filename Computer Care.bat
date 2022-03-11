@@ -330,7 +330,7 @@ echo.
 if %more% == 16 goto virtual
 if %more% == 17 goto ram
 if %more% == 18 goto size
-if %more% == 19 goto convert
+if %more% == 19 goto pdf
 if %more% == b goto ack
 echo.
 goto q
@@ -403,7 +403,22 @@ echo.
 pause
 goto main
 
-
+:pdf
+cls
+echo.
+echo        Image to PDF Convert
+echo.
+set /p pdf="Enter First File path :"
+echo.
+echo Single Image to pdf convert: image_name.jpg / All Images to pdf conver : *.jpg 
+echo.
+set /p pdf2="Enter File Name:"
+echo.
+set /p pdf3="Enter Output File name : "
+echo.
+magick "%pdf%\%pdf2%" "%pdf%\%pdf3%.pdf"
+pause
+goto main
 
 :ack
 cls
